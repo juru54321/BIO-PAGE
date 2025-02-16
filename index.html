@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student & Software Developer</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #1e2a2a;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            color: #f7a600;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #00b894;
+        }
+
+        /* Container */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 60px 0;
+            position: relative;
+            background: linear-gradient(135deg, #9b59b6, #2980b9);
+            border-radius: 20px;
+        }
+
+        .header-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 5px;
+            text-shadow: 0 0 20px rgba(247, 166, 0, 0.6);
+        }
+
+        /* Profile Picture */
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #f7a600;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        /* About Me Section */
+        .about {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #2d6a4f;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-text {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            color: #ddd;
+        }
+
+        .highlight {
+            color: #9b59b6;
+            font-weight: bold;
+        }
+
+        /* Skills Section */
+        .skills {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .skill-item {
+            background-color: #2980b9;
+            border-radius: 8px;
+            padding: 20px;
+            width: 30%;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .skill-item::before {
+            content: "🔶";
+            font-size: 3rem;
+            color: #f7a600;
+            position: absolute;
+            top: -20px;
+            left: -20px;
+        }
+
+        .skill-item:hover {
+            background-color: #16a085;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-item h3 {
+            font-size: 1.5rem;
+            color: #f7a600;
+        }
+
+        .skill-item p {
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        /* Projects Section */
+        .projects {
+            background-color: #2d6a4f;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .projects h3 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        .project-item {
+            background-color: #1e3a3a;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 20px;
+            max-width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-item::after {
+            content: "✨";
+            font-size: 2rem;
+            color: #f7a600;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .project-item:hover {
+            background-color: #00b894;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .project-item h4 {
+            font-size: 1.5rem;
+            color: #f7a600;
+        }
+
+        .project-item p {
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: #2980b9;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .contact h3 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        .contact-info {
+            font-size: 1.2rem;
+            color: #ddd;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e3a3a;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            color: #ddd;
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #f7a600;
+        }
+
+        /* Decorative Pseudo-Shape */
+        .shape {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            background-color: #f7a600;
+            margin-top: 20px;
+        }
+
+        .shape::before {
+            content: "🔲";
+            font-size: 3rem;
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            color: #2980b9;
+        }
+
+        .shape::after {
+            content: "🌟";
+            font-size: 2rem;
+            position: absolute;
+            bottom: -20px;
+            right: 20px;
+            color: #9b59b6;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1 class="header-title">Software Developer & Student</h1>
+            <img src="your-profile-pic.jpg" alt="Profile Picture" class="profile-pic">
+        </header>
+
+        <!-- About Me Section -->
+        <section class="about">
+            <h2>About Me</h2>
+            <p class="about-text">Hi, I'm <span class="highlight">[Your Name]</span>, a passionate <span class="highlight">software developer</span> and a <span class="highlight">student</span> constantly learning and exploring new technologies. I specialize in web development, with experience in full-stack technologies like JavaScript, React, and Node.js.</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills">
+            <div class="skill-item">
+                <h3>Frontend</h3>
+                <p>HTML, CSS, JavaScript, React, Vue</p>
+            </div>
+            <div class="skill-item">
+                <h3>Backend</h3>
+                <p>Node.js, Express, MongoDB, PostgreSQL</p>
+            </div>
+            <div class="skill-item">
+                <h3>Tools</h3>
+                <p>Git, Docker, Nginx, Firebase</p>
+            </div>
+        </section>
+
+        <!-- Decorative Shape -->
+        <div class="shape"></div>
+
+        <!-- Projects Section -->
+        <section class="projects">
+            <h3>Featured Projects</h3>
+            <div class="project-item">
+                <h4>Project 1: Personal Portfolio</h4>
+                <p>Built a dynamic portfolio to showcase my projects and skills using HTML, CSS, and JavaScript.</p>
+            </div>
+            <div class="project-item">
+                <h4>Project 2: E-commerce Website</h4>
+                <p>Developed a full-stack e-commerce website with user authentication, product management, and payments using React and Node.js.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <h3>Contact Me</h3>
+            <p class="contact-info">You can reach me via <a href="mailto:your-email@example.com">email</a> or through my social media accounts:</p>
+            <p class="contact-info">LinkedIn: <a href="https://linkedin.com/in/yourprofile">yourprofile</a> | GitHub: <a href="https://github.com/yourprofile">yourprofile</a></p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
